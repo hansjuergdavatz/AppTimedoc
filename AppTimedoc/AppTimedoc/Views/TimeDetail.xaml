@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTimedoc.Views.TimeDetail">
+  <ContentPage.Content>
+    <StackLayout BackgroundColor="{StaticResource Accent}" Padding="20">
+
+      <Label Text="Kommen" TextColor="White" FontSize="Medium"></Label>
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <DatePicker x:Name="ComeDate" DateSelected="ComeDate_DateSelected" />
+        <TimePicker x:Name="ComeTime" PropertyChanged="ComeTime_PropertyChanged" />
+      </StackLayout>
+
+      <Label Text="Gehen" TextColor="White" FontSize="Medium"></Label>
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <DatePicker x:Name="GoDate" DateSelected="GoDate_DateSelected" />
+        <TimePicker x:Name="GoTime" PropertyChanged="GoTime_PropertyChanged" />
+      </StackLayout>
+
+      <Entry x:Name="Remark" Text="" FontSize="Medium" />
+
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <Button x:Name="btnSave" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Speichern" Clicked="btnSave_Clicked"/>
+        <Button x:Name="btnDelete" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Löschen" Clicked="btnDelete_Clicked"/>
+        <Button x:Name="btnAbort" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Zurück" Clicked="btnAbort_Clicked"/>
+      </StackLayout>
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

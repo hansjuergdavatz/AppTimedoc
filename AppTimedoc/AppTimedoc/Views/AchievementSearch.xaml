@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTimedoc.Views.AchievementSearch">
+  <ContentPage.Content>
+    <StackLayout BackgroundColor="{StaticResource Accent}" Padding="20">
+
+      <StackLayout Orientation="Vertical">
+        <Label Text="Filter eingeben" TextColor="White" FontSize="Small"></Label>
+        <Entry x:Name="txtSearch" Text="" FontSize="Medium" HorizontalOptions="FillAndExpand" />
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <Button x:Name="btnSearch" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Suchen" Clicked="btnSearch_Clicked"/>
+        <Button x:Name="btnAbort" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Zurück" Clicked="btnAbort_Clicked"/>
+      </StackLayout>
+
+      <ListView x:Name="AchievementListView"
+            ItemsSource="{Binding Path=Achievement}"
+            ListView.RowHeight="60" ItemSelected="AchievementListView_ItemSelected" >
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Vertical">
+                <Entry Text="{Binding Id}" IsVisible="False"/>
+                <Label Text="{Binding TxtLarge}" FontSize="Medium" />
+                <Label Text="{Binding TxtSmall}" FontSize="Small" />
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

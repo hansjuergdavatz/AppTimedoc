@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTimedoc.Views.Login">
+  <StackLayout BackgroundColor="{StaticResource Accent}" Padding="20">
+    <Label Text="TIMEDOC Login" TextColor="White" FontSize="20"></Label>
+    <Entry x:Name="LoginId" Placeholder="LoginId" WidthRequest="150"></Entry>
+    <Entry x:Name="Password" IsPassword="True" Placeholder="Passwort" WidthRequest="150"></Entry>
+
+    <Button x:Name="btnLogin" BackgroundColor="Gray" TextColor="White" Text="Save" Clicked="OnLogin"/>
+  </StackLayout>
+</ContentPage>

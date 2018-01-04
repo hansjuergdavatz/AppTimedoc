@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTimedoc.Views.WorkDetail">
+  <ContentPage.Content>
+    <StackLayout BackgroundColor="{StaticResource Accent}" Padding="5">
+      <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <Button x:Name="BtnOrder" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Auftrag" Clicked="BtnOrder_Clicked">
+          <!--<Button.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Button.HeightRequest>-->
+        </Button>
+        <Button x:Name="btnCost" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Kostenträger" Clicked="btnCost_Clicked">
+          <!--<Button.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Button.HeightRequest>-->
+        </Button>
+        <Button x:Name="btnAchievement" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Leistung" Clicked="btnAchievement_Clicked">
+          <!--<Button.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Button.HeightRequest>-->
+        </Button>
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <Label Text="Start" TextColor="White" FontSize="Small"></Label>
+        <DatePicker x:Name="DateAchie">
+          <!--<DatePicker.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">42</On>
+              <On Platform="Android,Windows">42</On>
+            </OnPlatform>
+          </DatePicker.HeightRequest>-->
+        </DatePicker>
+        <TimePicker x:Name="TimeAchie" PropertyChanged="TimeAchie_PropertyChanged">
+          <!--<TimePicker.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">42</On>
+              <On Platform="Android,Windows">42</On>
+            </OnPlatform>
+          </TimePicker.HeightRequest>-->
+        </TimePicker>
+        <Button x:Name="btnStart" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" FontSize="Small" TextColor="White" Text="Start" Clicked="btnStart_Clicked">
+          <!--<Button.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">42</On>
+              <On Platform="Android,Windows">42</On>
+            </OnPlatform>
+          </Button.HeightRequest>-->
+        </Button>
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <Label Text="Stopp" TextColor="White" FontSize="Small"></Label>
+        <DatePicker x:Name="DateAchie2">
+          <!--<DatePicker.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">41</On>
+              <On Platform="Android,Windows">41</On>
+            </OnPlatform>
+          </DatePicker.HeightRequest>-->
+        </DatePicker>
+        <TimePicker x:Name="TimeAchie2" PropertyChanged="TimeAchie2_PropertyChanged">
+          <!--<TimePicker.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">41</On>
+              <On Platform="Android,Windows">41</On>
+            </OnPlatform>
+          </TimePicker.HeightRequest>-->
+        </TimePicker>
+        <Button x:Name="btnStopp" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" FontSize="Small" TextColor="White" Text="Stopp" Clicked="btnStopp_Clicked">
+          <!--<Button.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">41</On>
+              <On Platform="Android,Windows">41</On>
+            </OnPlatform>
+          </Button.HeightRequest>-->
+        </Button>
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <Label Text="Menge" TextColor="White" FontSize="Small">
+          <!--<Label.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Label.HeightRequest>-->
+        </Label>
+        <Entry x:Name="Menge" Text="" FontSize="Small" Keyboard="Numeric">
+          <!--<Entry.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Entry.HeightRequest>-->
+        </Entry>
+        <Label x:Name="Unit" Text="" FontSize="Small">
+          <!--<Label.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Label.HeightRequest>-->
+        </Label>
+        <Label x:Name="Ver" Text="Verrechenbar " FontSize="Small">
+          <!--<Label.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Label.HeightRequest>-->
+        </Label>
+        <Switch x:Name="SwitchVerrechenbar" IsToggled="False">
+          <!--<Switch.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Switch.HeightRequest>-->
+        </Switch>
+      </StackLayout>
+
+      <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <Label Text="Info" TextColor="White" FontSize="Small"></Label>
+        <Editor x:Name="Info" Text="" FontSize="Small"></Editor>
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <Button x:Name="btnSave" BackgroundColor="Gray" TextColor="White" Text="" Image="ic_save_black_24dp.png" HorizontalOptions="FillAndExpand" Clicked="btnSave_Clicked">
+          <!--<Button.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Button.HeightRequest>-->
+        </Button>
+        <Button x:Name="btnDelete" BackgroundColor="Gray" TextColor="White" Text="" Image="ic_delete_black_24dp.png" HorizontalOptions="FillAndExpand" Clicked="btnDelete_Clicked">
+          <!--<Button.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Button.HeightRequest>-->
+        </Button>
+        <Button x:Name="btnAbort" BackgroundColor="Gray" TextColor="White" Text="" Image="ic_arrow_back_black_24dp.png" HorizontalOptions="FillAndExpand" Clicked="btnAbort_Clicked">
+          <!--<Button.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Button.HeightRequest>-->
+        </Button>
+        <Button x:Name="btnSignature" BackgroundColor="Gray" TextColor="White" Text="" Image="ic_border_color_black_24dp.png" HorizontalOptions="FillAndExpand" Clicked="btnSignature_Clicked">
+          <!--<Button.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double">
+              <On Platform="iOS">40</On>
+              <On Platform="Android,Windows">40</On>
+            </OnPlatform>
+          </Button.HeightRequest>-->
+        </Button>
+      </StackLayout>
+      <ActivityIndicator x:Name="waitCursor" Color="Red" IsRunning="False" IsVisible="False" />
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTimedoc.Views.Time">
+  <StackLayout BackgroundColor="{StaticResource Accent}" Padding="20">
+
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Datum: " FontSize="20" TextColor="White" VerticalOptions="Center"/>
+      <DatePicker x:Name="DayDate" DateSelected="DayDate_DateSelected" />
+      <Label x:Name="lblConnect" FontSize="20" TextColor="White" VerticalOptions="Center" Text="" />
+    </StackLayout>
+
+    <Label Text="Einträge unter 1 Minute werden gelöscht" TextColor="White" FontSize="10"></Label>
+
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+      <Button x:Name="btnCome" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Kommen" Clicked="btnCome_Clicked"/>
+      <Button x:Name="btnGo" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" Text="Gehen" Clicked="btnGo_Clicked"/>
+    </StackLayout>
+
+    <ListView x:Name="WorkingTimeView"
+            ItemsSource="{Binding Path=WorkingTimes}"
+            ListView.RowHeight="60" ItemSelected="WorkingTimeView_ItemSelected" >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Vertical">
+              <Entry Text="{Binding Id}" IsVisible="False"/>
+              <Label Text="{Binding TxtLarge}" FontSize="Large" />
+              <Label Text="{Binding TxtSmall}" FontSize="Small" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+  </StackLayout>
+</ContentPage>
